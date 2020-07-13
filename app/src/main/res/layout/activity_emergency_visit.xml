@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmergencyVisit">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="112dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057"
+        app:srcCompat="@drawable/logo" />
+
+    <Spinner
+        android:id="@+id/etSpecialist"
+        android:layout_width="254dp"
+        android:layout_height="38dp"
+        android:autofillHints="Specialist"
+        android:ems="10"
+        android:entries="@array/Specialization"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSpecialist"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/btnEmgSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/search_go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evSpinner"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ListView
+        android:id="@+id/listDoctor"
+        android:layout_width="391dp"
+        android:layout_height="323dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmgSearch"
+        app:layout_constraintVertical_bias="0.27"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/evSpinner"
+        android:layout_width="353dp"
+        android:layout_height="43dp"
+        android:entries="@array/mode"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation"
+        app:layout_constraintVertical_bias="0.041" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,175 @@
+<resources>
+    <string name="app_name">MyDoc</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="login">LOGIN</string>
+    <string name="username"> Username</string>
+    <string name="password1"> Password</string>
+    <string name="new_user_register_here">New user? Register here</string>
+    <string name="todo1">TODO</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email"> Email</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp">OTP</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="verify">Verify</string>
+    <string name="phone_no"> Phone No</string>
+    <string name="name"> Name</string>
+    <string name="email1"> Email</string>
+    <string name="phone"> Phone No</string>
+    <string name="male"> Male</string>
+    <string name="female"> Female</string>
+    <string name="others"> Others</string>
+    <string name="age"> Age</string>
+    <string name="register"> REGISTER</string>
+    <string name="registration">Registration</string>
+    <string name="already_registered_click_here">Already registered? Click Here</string>
+    <string name="password"> Password</string>
+    <string name="logout"> LOGOUT</string>
+    <string name="home_page">Home page</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+    <string name="change_password">Change Password</string>
+    <string name="gender">Gender</string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="update">Update</string>
+    <string name="dob">DOB</string>
+    <string name="new_password">New password</string>
+    <string name="personal_appointment">Personal Appointment</string>
+    <string name="online_consultation">Online consultation</string>
+    <string name="door_step_treatment">Door-step Treatment</string>
+    <string name="today_s_health_tip">Today\'s Health Tip</string>
+    <string name="view_next">View Next</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="location">Location</string>
+    <string name="default_notification_channel_id">defualtNotification</string>
+
+
+    <string-array name="Health_tips">
+        <item> Wash your hands frequently and carefully</item>
+        <item> Avoid touching your face</item>
+        <item> Stop shaking hands and hugging people — for now</item>
+        <item> Don’t share personal items</item>
+        <item> Cover your mouth and nose when you cough and sneeze</item>
+        <item> Clean and disinfect surfaces</item>
+        <item> Take social distancing seriously and do not gather in groups</item>
+        <item> Avoid eating or drinking in public places</item>
+        <item> Wash fresh groceries</item>
+        <item> Self-quarantine if sick</item>
+    </string-array>
+
+    <string-array name="Issue">
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+        <item>prevention for CoViD-19</item>
+    </string-array>
+
+    <string-array name="Specialization">
+        <item>--Specialist--</item>
+        <item> Allergist</item>
+        <item> Anaesthesiologist</item>
+        <item> Andrologist</item>
+        <item> Cardiologist</item>
+        <item> Cardiac Electrophysiologist</item>
+        <item> Dermatologist</item>
+        <item> dentist</item>
+        <item>Dentist</item>
+        <item> Emergency Room (ER) Doctors</item>
+        <item> Endocrinologist</item>
+        <item> Epidemiologist</item>
+        <item> Family Medicine Physician</item>
+        <item> Gastroenterologist</item>
+        <item> Geriatrician</item>
+        <item> Hyperbaric Physician</item>
+        <item> Hematologist</item>
+        <item> Hepatologist</item>
+        <item> Immunologist</item>
+        <item> Infectious Disease Specialist</item>
+        <item> Intensivist</item>
+        <item> Internal Medicine Specialist</item>
+        <item> Maxillofacial Surgeon / Oral Surgeon</item>
+        <item> Medical Examiner</item>
+        <item> Medical Geneticist</item>
+        <item> Neonatologist</item>
+        <item> Nephrologist</item>
+        <item> Neurologist</item>
+        <item> Neurosurgeon</item>
+        <item> Nuclear Medicine Specialist</item>
+        <item> Obstetrician/Gynecologist (OB/GYN) </item>
+        <item> Occupational Medicine Specialist</item>
+        <item> Oncologist</item>
+        <item> Ophthalmologist</item>
+        <item> Orthopedic Surgeon / Orthopedist</item>
+        <item> Otolaryngologist (also ENT Specialist) </item>
+        <item> Parasitologist</item>
+        <item> Pathologist</item>
+        <item> Perinatologist</item>
+        <item> Periodontist</item>
+        <item> Pediatrician</item>
+        <item> Physiatrist</item>
+        <item> Plastic Surgeon</item>
+        <item> Psychiatrist</item>
+        <item> Pulmonologist</item>
+        <item> Radiologist</item>
+        <item> Rheumatologist</item>
+        <item> Sleep Doctor / Sleep Disorders Specialist</item>
+        <item> Spinal Cord Injury Specialist</item>
+        <item> Sports Medicine Specialist</item>
+        <item> Surgeon</item>
+        <item> Thoracic Surgeon</item>
+        <item> Urologist</item>
+        <item> Vascular Surgeon</item>
+        <item> Veterinarian</item>
+        <item> Palliative Care Specialist</item>
+        <item>--Non-medical Specialists--</item>
+        <item> Acupuncturist</item>
+        <item> Audiologist</item>
+        <item> Ayurvedic Practioner</item>
+        <item> Chiropractor</item>
+        <item> Diagnostician</item>
+        <item> Homeopathic Doctor</item>
+        <item> Microbiologist</item>
+        <item> Naturopathic Doctor</item>
+        <item> Pharmacist</item>
+        <item> Physiotherapist</item>
+        <item> Podiatrist / Chiropodist</item>
+        <item> Registered Massage Therapist</item>
+    </string-array>
+
+    <string-array name="Appoint">
+        <item> Normal Appointment</item>
+        <item> Emergency Appointment</item>
+    </string-array>
+
+    <string-array name="mode">
+        <item> Normal visit</item>
+        <item> Emergency visit</item>
+    </string-array>
+
+</resources>

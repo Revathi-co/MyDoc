@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="vertical"
+    tools:context=".AppointmentBooking">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="117dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046"
+        app:srcCompat="@drawable/logo" />
+
+    <Spinner
+        android:id="@+id/etSpecialist"
+        android:layout_width="247dp"
+        android:layout_height="61dp"
+        android:autofillHints="Specialist"
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:entries="@array/Specialization"
+        android:inputType="textPersonName"
+        android:paddingLeft="20sp"
+        android:paddingRight="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="241dp"
+        android:layout_height="55dp"
+        android:autofillHints=""
+        android:background="@drawable/input_background"
+        android:ems="10"
+        android:hint="@string/location"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSpecialist"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <Button
+        android:id="@+id/btnAppointSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/search_go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <Spinner
+        android:id="@+id/apSpinner"
+        android:layout_width="310dp"
+        android:layout_height="47dp"
+        android:entries="@array/Appoint"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLocation"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <ListView
+        android:id="@+id/listDoctor"
+        android:layout_width="391dp"
+        android:layout_height="323dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAppointSearch"
+        app:layout_constraintVertical_bias="0.538"
+        tools:visibility="visible" >
+
+
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

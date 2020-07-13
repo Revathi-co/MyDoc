@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background ="@drawable/wallpaper"
+    android:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="419dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/mobile_navigation" />
+
+
+    <ViewFlipper
+        android:id="@+id/v_flipper"
+        android:layout_width="409dp"
+        android:layout_height="214dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvPersonalAppoint"
+        android:layout_width="395dp"
+        android:layout_height="39dp"
+        android:background="@drawable/input_background"
+        android:drawableStart="@drawable/ic_people_black_24dp"
+        android:drawableLeft="@drawable/ic_people_black_24dp"
+        android:gravity="center|start"
+        android:text="@string/personal_appointment"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_flipper"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/tvOnlineCon"
+        android:layout_width="395dp"
+        android:layout_height="39dp"
+        android:background="@drawable/input_background"
+        android:drawableStart="@drawable/ic_voice_chat_black_24dp"
+        android:drawableLeft="@drawable/ic_voice_chat_black_24dp"
+        android:gravity="center|start"
+        android:text="@string/online_consultation"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersonalAppoint"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/tvDoorStep"
+        android:layout_width="395dp"
+        android:layout_height="39dp"
+        android:background="@drawable/input_background"
+        android:drawableStart="@drawable/doorstep"
+        android:drawableLeft="@drawable/doorstep"
+        android:gravity="center|start"
+        android:text="@string/door_step_treatment"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnlineCon"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <TextView
+        android:id="@+id/tvHealthTip"
+        android:layout_width="357dp"
+        android:layout_height="147dp"
+        android:background="@color/cardview_light_background"
+        android:isScrollContainer="true"
+        android:textColor="#0A196A"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.159" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="207dp"
+        android:layout_height="34dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:isScrollContainer="true"
+        android:text="@string/today_s_health_tip"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDoorStep"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <Button
+        android:id="@+id/btnViewNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next tip"
+        android:textColor="#0A0A0C"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHealthTip"
+        app:layout_constraintEnd_toEndOf="@+id/tvHealthTip"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/tvHealthTip"
+        app:layout_constraintTop_toTopOf="@+id/tvHealthTip"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
