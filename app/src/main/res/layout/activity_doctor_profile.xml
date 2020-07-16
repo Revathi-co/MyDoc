@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     android:visibility="visible"
     tools:context=".DoctorProfile">
 
     <TextView
         android:id="@+id/tvDoctorProfile"
-        android:layout_width="365dp"
-        android:layout_height="265dp"
+        android:layout_width="352dp"
+        android:layout_height="230dp"
         android:textColor="#0C0C0E"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,24 +36,26 @@
 
     <Button
         android:id="@+id/btnBookAppoint"
-        android:layout_width="188dp"
-        android:layout_height="72dp"
+        android:layout_width="182dp"
+        android:layout_height="54dp"
         android:background="@drawable/input_background"
         android:text="@string/book_appointment"
         android:textColor="#3F51B5"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDoctorProfile"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <TextView
         android:id="@+id/tvDate"
         android:layout_width="274dp"
         android:layout_height="38dp"
+        android:drawableEnd="@drawable/ic_date_range_black_24dp"
         android:drawableRight="@drawable/ic_date_range_black_24dp"
         android:ems="10"
         android:inputType="date"
@@ -63,20 +66,43 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDoctorProfile"
-        app:layout_constraintVertical_bias="0.478"
-        android:drawableEnd="@drawable/ic_date_range_black_24dp" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <Button
         android:id="@+id/btnBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book"
         android:background="@drawable/input_background"
+        android:text="Book"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDate"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.076" />
+
+    <ListView
+        android:layout_width="367dp"
+        android:layout_height="208dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBook" />
+
+    <ScrollView
+        android:layout_width="8dp"
+        android:layout_height="712dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

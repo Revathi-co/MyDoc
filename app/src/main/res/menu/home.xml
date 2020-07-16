@@ -6,4 +6,8 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_Logout"
+        android:icon="@drawable/ic_touch_app_black_24dp"
+        android:title="Logout" />
 </menu>

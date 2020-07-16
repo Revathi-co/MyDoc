@@ -2,7 +2,6 @@ package com.example.mydoc;
 
 import  android.content.Intent;
 import android.content.res.Resources;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.iid.FirebaseInstanceId;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
@@ -39,14 +37,14 @@ import androidx.appcompat.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private FirebaseAuth firebaseAuth;
-    private TextView dailyTips, bookAppointment, onlineCon, emergencyBook;
-    private Button viewNext;
+    private TextView dailyTips;
+    private TextView name;
+    private TextView email;
     private ArrayList<HealthTips> healthTips;
     private  int index;
     ViewFlipper v_flipper;
@@ -60,19 +58,44 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         firebaseAuth = FirebaseAuth.getInstance();
+        name = findViewById(R.id.tvUserName);
+        email = findViewById(R.id.tvUserEmail);
 
         manageConnections();
 
+        final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
+        DatabaseReference databaseReference = firebaseDatabase.getReference("Users").child(firebaseAuth.getUid());
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
+                assert userProfile!=null;
+                name.setText(userProfile.getName());
+                email.setText(userProfile.getEmail());
+                Toast.makeText(HomeActivity.this, "Welcome " +userProfile.getName() , Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(HomeActivity.this, databaseError.getCode(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
         //Image scrolling
-        int image[] = {R.drawable.pic1,R.drawable.pic2,R.drawable.pic3,R.drawable.pic4,R.drawable.pic5};
+        int[] image = {R.drawable.pic1,R.drawable.pic2,R.drawable.pic3,R.drawable.pic4,R.drawable.pic5};
         v_flipper = findViewById(R.id.v_flipper);
 
-        for (int i=0; i<image.length; i++){
-            flipperImage(image[i]);
+        for (int value : image) {
+            flipperImage(value);
         }
 
         //Appointment booking
-        bookAppointment = findViewById(R.id.tvPersonalAppoint);
+        TextView bookAppointment = findViewById(R.id.tvPersonalAppoint);
         bookAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         //Online Consultation
-        onlineCon = findViewById(R.id.tvOnlineCon);
+        TextView onlineCon = findViewById(R.id.tvOnlineCon);
         onlineCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +113,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         //Emergency booking
-        emergencyBook = findViewById(R.id.tvDoorStep);
+        TextView emergencyBook = findViewById(R.id.tvDoorStep);
         emergencyBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +123,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //generation of health tips
         dailyTips = findViewById(R.id.tvHealthTip);
-        viewNext = findViewById(R.id.btnViewNext);
+        Button viewNext = findViewById(R.id.btnViewNext);
 
         Resources res = getResources();
         String[] allTips = res.getStringArray(R.array.Health_tips);
